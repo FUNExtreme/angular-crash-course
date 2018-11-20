@@ -10,6 +10,7 @@ import { ConfiguratorStartComponent } from './components/configurator-start/conf
 import { ConfiguratorOptionsComponent } from './components/configurator-options/configurator-options.component';
 import { ConfiguratorSummaryComponent } from './components/configurator-summary/configurator-summary.component';
 import { ConfiguratorItemComponent } from './components/configurator-item/configurator-item.component';
+import { NoSpacesPipe } from './pipes/no-spaces.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ConfiguratorItemComponent } from './components/configurator-item/config
     ConfiguratorStartComponent,
     ConfiguratorOptionsComponent,
     ConfiguratorSummaryComponent,
-    ConfiguratorItemComponent
+    ConfiguratorItemComponent,
+    NoSpacesPipe
   ],
   imports: [
     BrowserModule,
