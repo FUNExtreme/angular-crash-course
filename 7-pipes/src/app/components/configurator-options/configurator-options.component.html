@@ -1,0 +1,9 @@
+<form [formGroup]="optionsForm">
+  <cc-configurator-item 
+    *ngFor="let option of options"
+    [option]="option" 
+    [control]="optionsForm.get(option.id)">
+  </cc-configurator-item>
+</form>
+
+<a class="btn btn-default" routerLink="/configurator/summary">Summary ></a>

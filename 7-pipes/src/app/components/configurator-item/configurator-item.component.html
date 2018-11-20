@@ -1,0 +1,16 @@
+<div class="card mb-2">
+    <div class="card-body">
+      <div class="card-title">
+        {{ option?.name }}
+      </div>
+      <div class="card-text">
+        {{ option?.price }} euro
+      </div>
+    </div>
+    <div class="card-footer" *ngIf="control">
+      <label>
+        I want this option
+        <input type="checkbox" [formControl]="control" />
+      </label>
+    </div>
+  </div>
