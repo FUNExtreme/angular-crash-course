@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfiguratorHelperService } from '../../services/configurator-helper.service';
+import { CarOption } from '../../models/CarOption';
 
 @Component({
   selector: 'cc-configurator-summary',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./configurator-summary.component.scss']
 })
 export class ConfiguratorSummaryComponent implements OnInit {
+  chosenOptions: CarOption[];
 
-  constructor() { }
+  constructor(private configuratorHelper: ConfiguratorHelperService) { }
 
   ngOnInit() {
+    this.chosenOptions = this.configuratorHelper.chosenOptions;
   }
-
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { CarOption } from '../../models/CarOption';
+import { ConfiguratorHelperService } from '../../services/configurator-helper.service';
 
 @Component({
   selector: 'cc-configurator-options',
@@ -9,19 +10,13 @@ import { CarOption } from '../../models/CarOption';
 })
 export class ConfiguratorOptionsComponent implements OnInit {
 
-  options: CarOption[] = [
-    { id: '17w', name: '17" wheels', price: 1800 },
-    { id: 'bl', name: 'blinkers', price: 5 },
-    { id: 'aa', name: 'Android Auto', price: 250 }
-  ];
+  constructor(private configuratorHelper: ConfiguratorHelperService) {}
 
   optionsForm: FormGroup;
+  options: CarOption[];
 
   ngOnInit() {
-    const optionControls = {};
-    for (const option of this.options) {
-      optionControls[option.id] = new FormControl(false);
-    }
-    this.optionsForm = new FormGroup(optionControls);
+    this.optionsForm = this.configuratorHelper.buildFormFromCarOptions();
+    this.options = this.configuratorHelper.options;
   }
 }
