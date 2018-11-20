@@ -8,10 +8,16 @@ export class MyComponentComponent {
 
   myVariable = 'This is a variable with a string';
 
+  variableContainingColor = 'red';
+
   myFunction = (myArgument: string, event: Event) => {
     event.preventDefault();
 
     console.log(myArgument);
   }
+
+  onOpen = () => {}
+  onClose = () => {}
+
 }
 

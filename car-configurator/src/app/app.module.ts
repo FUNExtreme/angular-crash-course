@@ -8,6 +8,8 @@ import { MyPipePipe } from './my-pipe.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyInpurePipePipe } from './my-inpure-pipe.pipe';
 import { MyComponentComponent } from './my-component/my-component.component';
+import { MyInputComponentComponent } from './my-input-component/my-input-component.component';
+import { MyOutputComponentComponent } from './my-output-component/my-output-component.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { MyComponentComponent } from './my-component/my-component.component';
     WelcomeComponent,
     MyPipePipe,
     MyInpurePipePipe,
-    MyComponentComponent
+    MyComponentComponent,
+    MyInputComponentComponent,
+    MyOutputComponentComponent
   ],
   imports: [
     BrowserModule,

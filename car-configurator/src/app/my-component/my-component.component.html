@@ -7,3 +7,8 @@
   <button (click)="myFunction('buttonclicked', $event)"></button>
 </div>
 
+<cc-my-input-component [color]="variableContainingColor"></cc-my-input-component>
+
+<cc-my-output-component (open)="onOpen()" (close)="onClose()"></cc-my-output-component>
+
+
