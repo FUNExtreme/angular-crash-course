@@ -9,6 +9,7 @@ import { ConfiguratorComponent } from './components/configurator/configurator.co
 import { ConfiguratorStartComponent } from './components/configurator-start/configurator-start.component';
 import { ConfiguratorOptionsComponent } from './components/configurator-options/configurator-options.component';
 import { ConfiguratorSummaryComponent } from './components/configurator-summary/configurator-summary.component';
+import { ConfiguratorItemComponent } from './components/configurator-item/configurator-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ConfiguratorSummaryComponent } from './components/configurator-summary/
     ConfiguratorComponent,
     ConfiguratorStartComponent,
     ConfiguratorOptionsComponent,
-    ConfiguratorSummaryComponent
+    ConfiguratorSummaryComponent,
+    ConfiguratorItemComponent
   ],
   imports: [
     BrowserModule,
