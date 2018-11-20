@@ -12,3 +12,4 @@ export class MyGuardGuard implements CanActivate {
     return true;
   }
 }
+
