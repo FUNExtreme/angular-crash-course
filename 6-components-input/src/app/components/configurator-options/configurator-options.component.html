@@ -1,0 +1,20 @@
+<form [formGroup]="optionsForm">
+  <div class="card mb-2" *ngFor="let option of options">
+    <div class="card-body">
+      <div class="card-title">
+        {{ option.name }}
+      </div>
+      <div class="card-text">
+        {{ option.price }} euro
+      </div>
+    </div>
+    <div class="card-footer">
+      <label>
+        I want this option
+        <input type="checkbox" [formControl]="optionsForm.get(option.id)" />
+      </label>
+    </div>
+  </div>
+</form>
+
+<a class="btn btn-default" routerLink="/configurator/summary">Summary ></a>
