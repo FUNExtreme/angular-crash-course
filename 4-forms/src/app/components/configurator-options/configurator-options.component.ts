@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { CarOption } from '../../models/CarOption';
 
 @Component({
@@ -6,11 +7,21 @@ import { CarOption } from '../../models/CarOption';
   templateUrl: './configurator-options.component.html',
   styleUrls: ['./configurator-options.component.scss']
 })
-export class ConfiguratorOptionsComponent {
+export class ConfiguratorOptionsComponent implements OnInit {
 
   options: CarOption[] = [
-    { id: 0, name: '17" wheels', price: 1800 },
-    { id: 1, name: 'blinkers', price: 5 },
-    { id: 2, name: 'Android Auto', price: 250 }
+    { id: '17w', name: '17" wheels', price: 1800 },
+    { id: 'bl', name: 'blinkers', price: 5 },
+    { id: 'aa', name: 'Android Auto', price: 250 }
   ];
+
+  optionsForm: FormGroup;
+
+  ngOnInit() {
+    const optionControls = {};
+    for (const option of this.options) {
+      optionControls[option.id] = new FormControl(false);
+    }
+    this.optionsForm = new FormGroup(optionControls);
+  }
 }

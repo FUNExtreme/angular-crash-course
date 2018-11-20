@@ -1,5 +1,5 @@
 export interface CarOption {
-    id: number;
+    id: string;
     name: string;
     price: number;
 }
